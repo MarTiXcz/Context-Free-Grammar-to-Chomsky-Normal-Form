@@ -2,16 +2,21 @@ module Lib where
 
 import Data.Semigroup ((<>))
 import Options.Applicative
-import Data.Sequence ((<|))
 
-data Opts = Opts
-    { optionI :: !Bool
-    , option1 :: !Bool
-    , option2 :: !Bool
-    , optVal :: !String
+
+data Mode = PrintMode | SimpleMode | CnfMode
+    deriving Show
+
+data Input
+  = FileInput FilePath
+  | StdInput
+    deriving Show
+
+data Opts = Opts 
+    { mode :: Mode
+    , input :: Input
     }
-data Mode = Print | Simple | Cnf
-
+    deriving Show
 
 version :: String
 version = "0.1"
@@ -19,24 +24,36 @@ version = "0.1"
 
 parseArgs :: IO()
 parseArgs = do
-    opts <- execParser optsParser
-    putStrLn
-        (concat ["Hello, ", optVal opts, ", the flag i is ", show (optionI opts),
-         ", the flag i is ", show (option1 opts), ", the flag 2 is ", show (option2 opts)])
-  where
+    mode <- execParser optsParser
+    print (mode)
+    where
     optsParser =
         info
-            (helper <*> versionOption <*> programOptions)
+            (helper <*> versionOption <*> fullParser)
             (fullDesc <> progDesc "BKG-2-CNF" <>
              header
                  "BKG-2-CNF-program for converting any CFG to CNF")
     versionOption = infoOption version (long "version" <> help "Show version")
 
-programOptions :: Parser Opts
-programOptions =
-        Opts <$> switch (short 'i' <> help "Print unchanged CFG") <*>
-        switch (short '1' <> help "Print CFG without simple rules") <*>
-        switch (short '2' <> help "Print CFG in CNF") <*>
-        strOption
-            (long "some-value" <> metavar "VALUE" <> value "default" <>
-             help "Override default name")
+
+printMode :: Parser Mode
+printMode = flag' PrintMode (short 'i' <> help "Print unchanged CFG")
+
+simpleMode :: Parser Mode
+simpleMode = flag' SimpleMode (short '1' <> help "Print CFG without simple rules")
+
+cnfMode :: Parser Mode
+cnfMode = flag' CnfMode (short '2' <> help "Print CFG in CNF")
+
+modeParser :: Parser Mode
+modeParser = printMode <|> simpleMode <|> cnfMode
+
+fullParser :: Parser Opts
+fullParser = Opts <$> modeParser <*> fileInput
+
+
+fileInput :: Parser Input
+fileInput = FileInput <$> strOption
+  ( metavar "FILENAME"
+  <> value ""
+  <> help "Input file" )
