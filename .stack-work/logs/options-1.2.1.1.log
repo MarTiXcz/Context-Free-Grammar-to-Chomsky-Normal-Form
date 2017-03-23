@@ -1,0 +1,61 @@
+Configuring options-1.2.1.1...
+Building options-1.2.1.1...
+Preprocessing library options-1.2.1.1...
+[1 of 5] Compiling Options.Util     ( lib\Options\Util.hs, .stack-work\dist\ca59d0ab\build\Options\Util.o )
+
+lib\Options\Util.hs:39:1: warning: [-Wtabs]
+    Tab character found here, and in 19 further locations.
+    Please use spaces instead.
+[2 of 5] Compiling Options.Types    ( lib\Options\Types.hs, .stack-work\dist\ca59d0ab\build\Options\Types.o )
+
+lib\Options\Types.hs:5:1: warning: [-Wtabs]
+    Tab character found here, and in 41 further locations.
+    Please use spaces instead.
+[3 of 5] Compiling Options.Tokenize ( lib\Options\Tokenize.hs, .stack-work\dist\ca59d0ab\build\Options\Tokenize.o )
+
+lib\Options\Tokenize.hs:7:1: warning: [-Wtabs]
+    Tab character found here, and in 261 further locations.
+    Please use spaces instead.
+
+lib\Options\Tokenize.hs:14:1: warning: [-Wunused-imports]
+    The import of `Control.Applicative' is redundant
+      except perhaps to import instances from `Control.Applicative'
+    To import instances alone, use: import Control.Applicative()
+
+lib\Options\Tokenize.hs:55:32: warning: [-Wdeprecations]
+    In the use of type constructor or class `ErrorT'
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+lib\Options\Tokenize.hs:84:34: warning: [-Wdeprecations]
+    In the use of `runErrorT'
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+[4 of 5] Compiling Options.Help     ( lib\Options\Help.hs, .stack-work\dist\ca59d0ab\build\Options\Help.o )
+
+lib\Options\Help.hs:5:1: warning: [-Wtabs]
+    Tab character found here, and in 437 further locations.
+    Please use spaces instead.
+[5 of 5] Compiling Options          ( lib\Options.hs, .stack-work\dist\ca59d0ab\build\Options.o )
+
+lib\Options.hs:62:1: warning: [-Wtabs]
+    Tab character found here, and in 699 further locations.
+    Please use spaces instead.
+
+lib\Options.hs:147:1: warning: [-Wunused-imports]
+    The import of `Control.Applicative' is redundant
+      except perhaps to import instances from `Control.Applicative'
+    To import instances alone, use: import Control.Applicative()
+
+lib\Options.hs:712:54: warning: [-Wdeprecations]
+    In the use of `runErrorT'
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+lib\Options.hs:745:74: warning: [-Wdeprecations]
+    In the use of type constructor or class `ErrorT'
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+Installing library in
+C:\sr\snapshots\b201cfe6\lib\x86_64-windows-ghc-8.0.2\options-1.2.1.1-CYYVjt6pZJjHt5Dc1YU4Af
+Registering options-1.2.1.1...

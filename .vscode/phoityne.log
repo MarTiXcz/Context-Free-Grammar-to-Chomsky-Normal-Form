@@ -1,0 +1,93 @@
+2017-03-16 19:24:03 [ThreadId 3] ERROR phoityne - load file fail.[c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg/test/Spec.hs] file load error. 'c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg/test/Spec.hs'
+2017-03-16 19:24:03 [ThreadId 3] ERROR phoityne - startup load error. c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg/test/Spec.hs
+
+2017-03-16 19:25:15 [ThreadId 3] ERROR phoityne - load file fail.[c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg/test/Spec.hs] file load error. 'c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg/test/Spec.hs'
+2017-03-16 19:25:15 [ThreadId 3] ERROR phoityne - startup load error. c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg/test/Spec.hs
+
+2017-03-16 19:27:20 [ThreadId 3] ERROR phoityne - [deleteBreakPointOnGHCi] invalid delete break point. BreakPointData {nameBreakPointData = "Spec", filePathBreakPointData = "c:\\Users\\Martin\\Dropbox\\FIT\\Masters\\8.semestr\\FLP\\Fun_project\\bkg\\flp-fun-xzemek04\\test\\Spec.hs", lineNoBreakPointData = 2, breakNoBreakPointData = Nothing, conditionBreakPointData = Nothing, hitConditionBreakPointData = Nothing, hitCountBreakPointData = 0}
+2017-03-16 19:27:24 [ThreadId 3] ERROR phoityne - [deleteBreakPointOnGHCi] invalid delete break point. BreakPointData {nameBreakPointData = "Spec", filePathBreakPointData = "c:\\Users\\Martin\\Dropbox\\FIT\\Masters\\8.semestr\\FLP\\Fun_project\\bkg\\flp-fun-xzemek04\\test\\Spec.hs", lineNoBreakPointData = 2, breakNoBreakPointData = Nothing, conditionBreakPointData = Nothing, hitConditionBreakPointData = Nothing, hitCountBreakPointData = 0}
+2017-03-16 19:27:37 [ThreadId 3] ERROR phoityne - [deleteBreakPointOnGHCi] invalid delete break point. BreakPointData {nameBreakPointData = "Main", filePathBreakPointData = "c:\\Users\\Martin\\Dropbox\\FIT\\Masters\\8.semestr\\FLP\\Fun_project\\bkg\\flp-fun-xzemek04\\app\\Main.hs", lineNoBreakPointData = 6, breakNoBreakPointData = Nothing, conditionBreakPointData = Nothing, hitConditionBreakPointData = Nothing, hitCountBreakPointData = 0}
+2017-03-22 18:27:57 [ThreadId 3] ERROR phoityne - load file fail.[c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/app/Main.hs] file load error. 'c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/app/Main.hs'
+2017-03-22 18:27:57 [ThreadId 3] ERROR phoityne - startup load error. c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/app/Main.hs
+
+2017-03-22 18:41:58 [ThreadId 9] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-22 18:42:06 [ThreadId 10] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-22 18:46:50 [ThreadId 3] ERROR phoityne - load file fail.[c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/app/Main.hs] file load error. 'c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/app/Main.hs'
+2017-03-22 18:46:50 [ThreadId 3] ERROR phoityne - startup load error. c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/app/Main.hs
+
+2017-03-22 18:52:27 [ThreadId 9] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\app\Main.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\app\Main.hs'
+2017-03-22 18:52:29 [ThreadId 10] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\app\Main.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\app\Main.hs'
+2017-03-22 18:52:38 [ThreadId 11] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-22 18:52:40 [ThreadId 12] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-22 18:57:32 [ThreadId 13] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\app\Main.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\app\Main.hs'
+2017-03-22 21:34:43 [ThreadId 3] ERROR phoityne - load file fail.[c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/app/Main.hs] file load error. 'c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/app/Main.hs'
+2017-03-22 21:34:43 [ThreadId 3] ERROR phoityne - startup load error. c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/app/Main.hs
+
+2017-03-22 21:35:56 [ThreadId 3] ERROR phoityne - load file fail.[c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/app/Main.hs] file load error. 'c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/app/Main.hs'
+2017-03-22 21:35:56 [ThreadId 3] ERROR phoityne - startup load error. c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/app/Main.hs
+
+2017-03-22 23:21:03 [ThreadId 3] ERROR phoityne - load file fail.[c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/app/Main.hs] file load error. 'c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/app/Main.hs'
+2017-03-22 23:21:03 [ThreadId 3] ERROR phoityne - startup load error. c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/app/Main.hs
+
+2017-03-22 23:21:08 [ThreadId 9] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\app\Main.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\app\Main.hs'
+2017-03-22 23:21:20 [ThreadId 10] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\app\Main.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\app\Main.hs'
+2017-03-22 23:23:50 [ThreadId 10] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\app\Main.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\app\Main.hs'
+2017-03-22 23:27:11 [ThreadId 3] ERROR phoityne - ghci launch error. <file descriptor: 5>: hPutChar: resource vanished (Broken pipe)
+
+2017-03-22 23:27:11 [ThreadId 3] ERROR phoityne - [disconnectRequestHandler] ghci not started.
+2017-03-22 23:27:17 [ThreadId 3] ERROR phoityne - ghci launch error. <file descriptor: 5>: hPutChar: resource vanished (Broken pipe)
+
+2017-03-22 23:27:17 [ThreadId 3] ERROR phoityne - [disconnectRequestHandler] ghci not started.
+2017-03-22 23:49:08 [ThreadId 3] ERROR phoityne - load file fail.[c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/app/Main.hs] file load error. 'c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/app/Main.hs'
+2017-03-22 23:49:08 [ThreadId 3] ERROR phoityne - startup load error. c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/app/Main.hs
+
+2017-03-22 23:50:52 [ThreadId 10] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\test\Spec.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\test\Spec.hs'
+2017-03-22 23:50:54 [ThreadId 11] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\test\Spec.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\test\Spec.hs'
+2017-03-22 23:53:48 [ThreadId 3] ERROR phoityne - "error: * Variable not in scope: opts * Perhaps you meant data constructor `Opts' (line 6)"
+2017-03-22 23:53:55 [ThreadId 3] ERROR phoityne - "error: * Variable not in scope: opts * Perhaps you meant data constructor `Opts' (line 6)"
+2017-03-22 23:54:00 [ThreadId 3] ERROR phoityne - "error: * Variable not in scope: opts * Perhaps you meant data constructor `Opts' (line 6)"
+2017-03-22 23:54:10 [ThreadId 3] ERROR phoityne - "error: * Variable not in scope: opts * Perhaps you meant data constructor `Opts' (line 6)"
+2017-03-22 23:54:24 [ThreadId 3] ERROR phoityne - "error: * Variable not in scope: opts * Perhaps you meant data constructor `Opts' (line 6)"
+2017-03-22 23:54:38 [ThreadId 3] ERROR phoityne - "error: * Variable not in scope: opts * Perhaps you meant data constructor `Opts' (line 6)"
+2017-03-22 23:55:09 [ThreadId 3] ERROR phoityne - "error: * Variable not in scope: opts * Perhaps you meant data constructor `Opts' (line 6)"
+2017-03-22 23:55:21 [ThreadId 3] ERROR phoityne - "error: * Variable not in scope: opts * Perhaps you meant data constructor `Opts' (line 6)"
+2017-03-23 19:26:11 [ThreadId 3] ERROR phoityne - "error: * Variable not in scope: opts * Perhaps you meant data constructor `Opts' (line 6)"
+2017-03-23 19:27:58 [ThreadId 9] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:28:14 [ThreadId 10] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:28:22 [ThreadId 11] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:30:03 [ThreadId 12] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:30:13 [ThreadId 13] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:30:15 [ThreadId 14] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:31:09 [ThreadId 15] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:31:15 [ThreadId 16] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:31:18 [ThreadId 17] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:31:24 [ThreadId 3] ERROR phoityne - "error: Variable not in scope: opts"
+2017-03-23 19:31:27 [ThreadId 3] ERROR phoityne - load file fail.[c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/test/Spec.hs] file load error. 'c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/test/Spec.hs'
+2017-03-23 19:31:27 [ThreadId 3] ERROR phoityne - startup load error. c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/test/Spec.hs
+
+2017-03-23 19:31:27 [ThreadId 3] ERROR phoityne - "error: Variable not in scope: opts"
+2017-03-23 19:31:50 [ThreadId 9] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:32:28 [ThreadId 3] ERROR phoityne - "error: Variable not in scope: opts"
+2017-03-23 19:33:02 [ThreadId 10] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:33:03 [ThreadId 11] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:35:05 [ThreadId 12] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:36:35 [ThreadId 13] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:36:55 [ThreadId 3] ERROR phoityne - "error: Variable not in scope: opts"
+2017-03-23 19:39:18 [ThreadId 14] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:40:53 [ThreadId 3] ERROR phoityne - load file fail.[c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/test/Spec.hs] file load error. 'c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/test/Spec.hs'
+2017-03-23 19:40:53 [ThreadId 3] ERROR phoityne - startup load error. c:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04/test/Spec.hs
+
+2017-03-23 19:40:53 [ThreadId 3] ERROR phoityne - "error: Variable not in scope: opts"
+2017-03-23 19:40:59 [ThreadId 3] ERROR phoityne - "error: Variable not in scope: opts"
+2017-03-23 19:41:03 [ThreadId 3] ERROR phoityne - "error: Variable not in scope: opts"
+2017-03-23 19:41:05 [ThreadId 3] ERROR phoityne - "error: Variable not in scope: opts"
+2017-03-23 19:41:38 [ThreadId 9] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:41:41 [ThreadId 3] ERROR phoityne - "error: Variable not in scope: opts"
+2017-03-23 19:41:45 [ThreadId 3] ERROR phoityne - "error: Variable not in scope: opts"
+2017-03-23 19:41:45 [ThreadId 3] ERROR phoityne - "error: Variable not in scope: opts"
+2017-03-23 19:42:26 [ThreadId 12] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:48:39 [ThreadId 13] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:48:43 [ThreadId 14] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:49:29 [ThreadId 15] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:49:47 [ThreadId 16] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
+2017-03-23 19:53:12 [ThreadId 18] ERROR phoityne - load file fail.[C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs] file load error. 'C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\src\Lib.hs'
