@@ -7,14 +7,9 @@ import Options.Applicative
 data Mode = PrintMode | SimpleMode | CnfMode
     deriving Show
 
-data Input
-  = FileInput FilePath
-  | StdInput
-    deriving Show
-
 data Opts = Opts 
     { mode :: Mode
-    , input :: Input
+    , filepath :: FilePath
     }
     deriving Show
 
@@ -52,8 +47,8 @@ fullParser :: Parser Opts
 fullParser = Opts <$> modeParser <*> fileInput
 
 
-fileInput :: Parser Input
-fileInput = FileInput <$> strOption
+fileInput :: Parser FilePath
+fileInput = argument str
   ( metavar "FILENAME"
   <> value ""
   <> help "Input file" )
