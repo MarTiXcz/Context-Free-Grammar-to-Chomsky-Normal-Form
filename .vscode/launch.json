@@ -12,7 +12,7 @@
             "logFile": "${workspaceRoot}/.vscode/phoityne.log",
             "logLevel": "WARNING",
             "ghciPrompt": "H>>= ",
-            "ghciCmd": "stack ghci --ghci-options -i.:src:test:app --test --no-load --no-build --main-is TARGET",
+            "ghciCmd": "stack ghci --ghci-options -i.:src:src/parser::test:app --test --no-load --no-build --main-is TARGET",
             "ghciEnv": [],
             "stopOnEntry": true,
             "hackageVersion": "0.11.0"
