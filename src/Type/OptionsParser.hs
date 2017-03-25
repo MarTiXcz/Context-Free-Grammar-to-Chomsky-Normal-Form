@@ -1,4 +1,4 @@
-module Type.OptionsParserType where
+module Type.OptionsParser where
     
 data Mode = PrintMode | SimpleMode | CnfMode
     deriving Show

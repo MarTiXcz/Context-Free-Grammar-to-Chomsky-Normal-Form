@@ -1,17 +1,15 @@
 module Parser.OptionsParser where
 
-import Data.Semigroup ((<>))
-import Options.Applicative
+import           Data.Semigroup         ((<>))
+import           Options.Applicative
 
-import Type.OptionsParserType
+import           Type.OptionsParser
 
 version :: String
 version = "0.1"
 
 parseArgs :: IO Opts
-parseArgs = do
-    opts <- execParser optsParser
-    return opts
+parseArgs = execParser optsParser
     where
     optsParser =
         info

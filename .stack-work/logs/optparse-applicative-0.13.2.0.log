@@ -17,5 +17,5 @@ Preprocessing library optparse-applicative-0.13.2.0...
 [14 of 15] Compiling Options.Applicative ( Options\Applicative.hs, .stack-work\dist\ca59d0ab\build\Options\Applicative.o )
 [15 of 15] Compiling Options.Applicative.Arrows ( Options\Applicative\Arrows.hs, .stack-work\dist\ca59d0ab\build\Options\Applicative\Arrows.o )
 Installing library in
-C:\Users\Martin\Dropbox\FIT\Masters\8.semestr\FLP\Fun_project\bkg\flp-fun-xzemek04\.stack-work\install\65995373\lib\x86_64-windows-ghc-8.0.2\optparse-applicative-0.13.2.0-SWjmfay0WD4jZNxwNzmOL
+C:\sr\snapshots\b201cfe6\lib\x86_64-windows-ghc-8.0.2\optparse-applicative-0.13.2.0-SWjmfay0WD4jZNxwNzmOL
 Registering optparse-applicative-0.13.2.0...

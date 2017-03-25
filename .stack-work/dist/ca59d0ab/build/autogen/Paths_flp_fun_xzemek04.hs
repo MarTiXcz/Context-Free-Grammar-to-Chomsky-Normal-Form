@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "C:\\Users\\Martin\\Dropbox\\FIT\\Masters\\8.semestr\\FLP\\Fun_project\\bkg\\flp-fun-xzemek04\\.stack-work\\install\\65995373\\bin"
-libdir     = "C:\\Users\\Martin\\Dropbox\\FIT\\Masters\\8.semestr\\FLP\\Fun_project\\bkg\\flp-fun-xzemek04\\.stack-work\\install\\65995373\\lib\\x86_64-windows-ghc-8.0.2\\flp-fun-xzemek04-0.1.0.0-FpSIZxxNtcn4P8YM06k4YV"
+libdir     = "C:\\Users\\Martin\\Dropbox\\FIT\\Masters\\8.semestr\\FLP\\Fun_project\\bkg\\flp-fun-xzemek04\\.stack-work\\install\\65995373\\lib\\x86_64-windows-ghc-8.0.2\\flp-fun-xzemek04-0.1.0.0-F1felj7EeimIaCGDPwLs9c"
 dynlibdir  = "C:\\Users\\Martin\\Dropbox\\FIT\\Masters\\8.semestr\\FLP\\Fun_project\\bkg\\flp-fun-xzemek04\\.stack-work\\install\\65995373\\lib\\x86_64-windows-ghc-8.0.2"
 datadir    = "C:\\Users\\Martin\\Dropbox\\FIT\\Masters\\8.semestr\\FLP\\Fun_project\\bkg\\flp-fun-xzemek04\\.stack-work\\install\\65995373\\share\\x86_64-windows-ghc-8.0.2\\flp-fun-xzemek04-0.1.0.0"
 libexecdir = "C:\\Users\\Martin\\Dropbox\\FIT\\Masters\\8.semestr\\FLP\\Fun_project\\bkg\\flp-fun-xzemek04\\.stack-work\\install\\65995373\\libexec"

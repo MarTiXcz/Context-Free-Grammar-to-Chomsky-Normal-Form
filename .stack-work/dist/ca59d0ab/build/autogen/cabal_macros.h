@@ -14,19 +14,26 @@
   (major1) == 4 && (major2) <  9 || \
   (major1) == 4 && (major2) == 9 && (minor) <= 1)
 
-/* package containers-0.5.7.1 */
-#define VERSION_containers "0.5.7.1"
-#define MIN_VERSION_containers(major1,major2,minor) (\
-  (major1) <  0 || \
-  (major1) == 0 && (major2) <  5 || \
-  (major1) == 0 && (major2) == 5 && (minor) <= 7)
-
 /* package optparse-applicative-0.13.2.0 */
 #define VERSION_optparse_applicative "0.13.2.0"
 #define MIN_VERSION_optparse_applicative(major1,major2,minor) (\
   (major1) <  0 || \
   (major1) == 0 && (major2) <  13 || \
   (major1) == 0 && (major2) == 13 && (minor) <= 2)
+
+/* package parsec-3.1.11 */
+#define VERSION_parsec "3.1.11"
+#define MIN_VERSION_parsec(major1,major2,minor) (\
+  (major1) <  3 || \
+  (major1) == 3 && (major2) <  1 || \
+  (major1) == 3 && (major2) == 1 && (minor) <= 11)
+
+/* tool cpphs-1.20.4 */
+#define TOOL_VERSION_cpphs "1.20.4"
+#define MIN_TOOL_VERSION_cpphs(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  20 || \
+  (major1) == 1 && (major2) == 20 && (minor) <= 4)
 
 /* tool gcc-5.2.0 */
 #define TOOL_VERSION_gcc "5.2.0"
@@ -56,6 +63,13 @@
   (major1) == 2 && (major2) <  17 || \
   (major1) == 2 && (major2) == 17 && (minor) <= 3)
 
+/* tool happy-1.19.5 */
+#define TOOL_VERSION_happy "1.19.5"
+#define MIN_TOOL_VERSION_happy(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  19 || \
+  (major1) == 1 && (major2) == 19 && (minor) <= 5)
+
 /* tool hpc-0.67 */
 #define TOOL_VERSION_hpc "0.67"
 #define MIN_TOOL_VERSION_hpc(major1,major2,minor) (\
@@ -69,6 +83,13 @@
   (major1) <  0 || \
   (major1) == 0 && (major2) <  68 || \
   (major1) == 0 && (major2) == 68 && (minor) <= 1)
+
+/* tool hscolour-1.24 */
+#define TOOL_VERSION_hscolour "1.24"
+#define MIN_TOOL_VERSION_hscolour(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  24 || \
+  (major1) == 1 && (major2) == 24 && (minor) <= 0)
 
 /* tool pkg-config-0.29.1 */
 #define TOOL_VERSION_pkg_config "0.29.1"
@@ -84,7 +105,7 @@
   (major1) == 2 && (major2) <  25 || \
   (major1) == 2 && (major2) == 25 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "flp-fun-xzemek04-0.1.0.0-FpSIZxxNtcn4P8YM06k4YV"
+#define CURRENT_COMPONENT_ID "flp-fun-xzemek04-0.1.0.0-F1felj7EeimIaCGDPwLs9c"
 
-#define CURRENT_PACKAGE_KEY "flp-fun-xzemek04-0.1.0.0-FpSIZxxNtcn4P8YM06k4YV"
+#define CURRENT_PACKAGE_KEY "flp-fun-xzemek04-0.1.0.0-F1felj7EeimIaCGDPwLs9c"
 
