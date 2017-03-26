@@ -1,3 +1,13 @@
+//   _____                 __            _                                               _          _____  _  _   
+//  |  __ \               /_/           | |                                             | |        / ____|| || |_ 
+//  | |__) |__ _____ __   __ _ _ __ ___ | | ___   _   __   __   _ __  ___  ___ _   _  __| | ___   | |   |_  __  _|
+//  |  ___/ _ \_  / '_ \ / _` | '_ ` _ \| |/ / | | |  \ \ / /  | '_ \/ __|/ _ \ | | |/ _` |/ _ \  | |    _| || |_ 
+//  | |  | (_) / /| | | | (_| | | | | | |   <| |_| |   \ V /   | |_) \__ \  __/ |_| | (_| | (_) | | |___|_  __  _|
+//  |_|   \___/___|_| |_|\__,_|_| |_| |_|_|\_\\__, |    \_/    | .__/|___/\___|\__,_|\__,_|\___/   \_____||_||_|  
+//                                             __/ |           | |                                                
+//                                            |___/            |_|                                                
+
+
 // 1) 
 // foreach nonterminal A sestrojit mnozinu
 // NA 
@@ -14,6 +24,16 @@
 //     }
 // 3) použít Rules' 
 
+var PNew = new List<Rule>();
+
+//2)
+public void second(G g){
+    foreach (var nonTerminal in nonTerminals){
+        PNew.Add(g.P.Where(x => x.nonTerminal in allNonT))
+        ...
+    }
+}
+
 // Na[0]
 struct Rule = {
     string nonterminal,
@@ -21,9 +41,9 @@ struct Rule = {
 };
 var nonterminals = new List<string>();
 var P = new List<Rule>();
-P.Add(new Rule {"E","EpT"});
-P.Add(new Rule {"E","T"});
-P.Add(new Rule {"T","TmF"});
+P.Add(new Rule() {"E","EpT"});
+P.Add(new Rule() {"E","T"});
+P.Add(new Rule() {"T","TmF"});
 
 var allNonT = new List<List<string>>();
 foreach (var A in nonterminals)
@@ -56,7 +76,7 @@ private void addNTOriginal()
     {
         foreach (var rule in P)
         {
-            if (rule.nonterminal == B && rule.expression.isSingleNeterminal)
+            if (rule.nonterminal == B && rule.expression.isSingleNeterminal())
             {
                 nonT.Add(C)    
             } 

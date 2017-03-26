@@ -28,5 +28,6 @@ runMode mode grammar=
      case mode of
         PrintMode -> printCFG grammar
         -- SimpleMode -> printCFG (removeSimpleRules grammar)
-        SimpleMode -> print (getNonTerminals (tRules grammar) "T")
+        -- SimpleMode -> printRules (createNewRules (tNonTerminals grammar) (tRules grammar))
+        SimpleMode -> printCFG (removeSimpleRules grammar)       
         CnfMode -> print "mode CnfMode not implemented yet"
