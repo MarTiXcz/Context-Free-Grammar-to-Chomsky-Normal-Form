@@ -1,12 +1,12 @@
 module Type.CFGParser where
 
-type TNonTerminal = Char
-
-type TTerminal = Char
+type TSymbol = Char
+type TNonTerminal = TSymbol
+type TTerminal = TSymbol
 
 data TRule = TRule
   { tNonTerminal :: TNonTerminal
-  , tExpression :: String
+  , tExpression :: [TSymbol]
   } deriving (Show)
 
 data TCFGrammar = TCFGrammar

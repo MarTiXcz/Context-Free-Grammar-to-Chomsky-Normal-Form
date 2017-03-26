@@ -4,12 +4,15 @@ import Parser.OptionsParser
 import System.Environment
 import Type.OptionsParser
 import Type.CFGParser
+import CFGAlgorithms
 
 main :: IO ()
 main
     --parse arguments
  = do
-  opts <- withArgs ["-i", "resources/test.txt"] parseArgs
+  -- opts <- withArgs ["-i", "resources/test.txt"] parseArgs
+  opts <- withArgs ["-1", "resources/study-text-example.txt"] parseArgs
+  
     --read file
   input <- getInput (filepath opts)
     --parse context free grammar
@@ -23,6 +26,7 @@ main
 runMode :: Mode -> TCFGrammar -> IO ()
 runMode mode grammar=  
      case mode of
-        PrintMode -> print grammar
-        SimpleMode -> print "mode SimpleMode not implemented yet"
+        PrintMode -> printCFG grammar
+        -- SimpleMode -> printCFG (removeSimpleRules grammar)
+        SimpleMode -> print (getNonTerminals (tRules grammar) "T")
         CnfMode -> print "mode CnfMode not implemented yet"

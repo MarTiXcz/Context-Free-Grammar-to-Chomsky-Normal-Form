@@ -1,0 +1,9 @@
+E,T,F
+p,m,i,l,r
+E
+E->EpT
+E->T
+T->TmF
+T->F
+F->lEr
+F->i
