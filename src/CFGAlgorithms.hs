@@ -13,7 +13,7 @@ getNonTerminals rules [] = []
 getNonTerminals rules [nonTerm] =
   let nonT =
         map
-          (head . tExpression)
+          (tExpression)
           (filter
              (\rule ->
                 isOneNonTerminal (tExpression rule) &&
@@ -50,7 +50,7 @@ getRulesForNonTerminal nonTerminal rules =
     (filter
        (\rule ->
           not (isOneNonTerminal (tExpression rule)) &&
-          --jestli neterminal pravidla je v Na mnozine
+          --if nonterminal on left side is Na set.
           elem (tNonTerminal rule) (getNonTerminals rules [nonTerminal]))
        rules)
 
@@ -60,7 +60,7 @@ removeSimpleRules originalGrammar =
   TCFGrammar
     (tNonTerminals originalGrammar)
     (tTerminals originalGrammar)
-    (tStartTerminal originalGrammar)
+    (tStartNonTerminal originalGrammar)
     (createRulesWithoutSimple
        (tNonTerminals originalGrammar)
        (tRules originalGrammar))

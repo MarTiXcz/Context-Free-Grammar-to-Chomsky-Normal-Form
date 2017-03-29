@@ -3,7 +3,9 @@ module Type.CFGParser where
 import Data.Char
 
 type TSymbol = Char
-type TNonTerminal = TSymbol
+
+type TNonTerminal = [TSymbol]
+
 type TTerminal = TSymbol
 
 data TRule = TRule
@@ -14,7 +16,7 @@ data TRule = TRule
 data TCFGrammar = TCFGrammar
   { tNonTerminals :: [TNonTerminal]
   , tTerminals :: [TTerminal]
-  , tStartTerminal :: TTerminal
+  , tStartNonTerminal :: TNonTerminal
   , tRules :: [TRule]
   } deriving (Show)
 

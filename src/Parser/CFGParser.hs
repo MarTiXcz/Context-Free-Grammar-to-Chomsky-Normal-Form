@@ -8,8 +8,14 @@ import Type.CFGParser
 comma :: Parser Char
 comma = char ','
 
+parseNonTerminal :: Parser TNonTerminal 
+parseNonTerminal = do
+  x <- many(upper <*> char '\'') <|> upper 
+  --y <- option _ (char '\'')
+  return x
+
 parseNonTerminals :: Parser [TNonTerminal]
-parseNonTerminals = sepBy1 upper comma
+parseNonTerminals = sepBy1 parseNonTerminal comma
 
 parseTerminals :: Parser [TTerminal]
 parseTerminals = sepBy1 lower comma
@@ -19,7 +25,7 @@ arrow = string "->"
 
 parseRule :: Parser TRule
 parseRule = do
-  nonTerminal <- upper
+  nonTerminal <- parseNonTerminal
   arrow
   expression <- many1 letter
   return $ TRule nonTerminal expression
@@ -40,7 +46,7 @@ cFG = do
   newLine
   terminals <- parseTerminals
   newLine
-  start <- upper
+  start <- parseNonTerminal
   newLine
   rules <- parseRules
   return $ TCFGrammar nonTerminals terminals start rules

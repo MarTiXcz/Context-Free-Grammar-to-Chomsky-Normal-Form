@@ -7,6 +7,7 @@ import System.IO.Error
        (catchIOError, ioeGetFileName, isDoesNotExistError)
 import Type.CFGParser
 
+
 getInput :: String -> IO String
 getInput "" = getContents
 getInput filePath = readFile filePath `catchIOError` handler
@@ -32,25 +33,33 @@ handler e
 --     printNonTerminals2 xs
 --TODO: ODSTRANIT REKURZI
 --private funkce
-printStringSepByComma :: [TSymbol] -> IO ()
+printStringSepByComma :: [String] -> IO ()
 printStringSepByComma [] = return ()
-printStringSepByComma [x] = putStr [x, '\n']
+printStringSepByComma [x] = putStr $ x ++ ['\n']
 printStringSepByComma (x:xs) = do
-  putStr [x, ',']
+  putStr $ x ++ [',']
   printStringSepByComma xs
+
+printTerminalsSepByComma :: String -> IO ()
+printTerminalsSepByComma [] = return ()
+printTerminalsSepByComma [x] = putStr [x ,'\n']
+printTerminalsSepByComma (x:xs) = do
+  putStr [x, ',']
+  printTerminalsSepByComma xs
+
 
 printNonTerminals :: [TNonTerminal] -> IO ()
 printNonTerminals = printStringSepByComma
 
 printTerminals :: [TTerminal] -> IO ()
-printTerminals = printStringSepByComma
+printTerminals = printTerminalsSepByComma
 
 printStart :: TNonTerminal -> IO ()
-printStart nonTerminal = putStr [nonTerminal, '\n']
+printStart nonTerminal = putStr $ nonTerminal ++ ['\n']
 
 printRule :: TRule -> IO ()
 printRule rule = do 
-  putChar $ tNonTerminal rule
+  putStr $ tNonTerminal rule
   putStr "->"
   putStr $ tExpression rule ++ ['\n']
 
@@ -64,5 +73,5 @@ printCFG :: TCFGrammar -> IO ()
 printCFG grammar = do
   printNonTerminals $ tNonTerminals grammar
   printTerminals $ tTerminals grammar
-  printStart $ tStartTerminal grammar
+  printStart $ tStartNonTerminal grammar
   printRules $ tRules grammar
