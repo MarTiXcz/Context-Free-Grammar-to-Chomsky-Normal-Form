@@ -14,11 +14,11 @@ getNonTerminals rules [nonTerm] =
   let nonT =
         map
           (head . tExpression)
-          (filter
+          $ filter
              (\rule ->
                 isOneNonTerminal (tExpression rule) &&
                 tNonTerminal rule == nonTerm)
-             rules)
+             rules
   in nonTerm : getNonTerminals rules nonT
 getNonTerminals rules (x:xs) = x : getNonTerminals rules xs
 
