@@ -10,9 +10,11 @@ comma = char ','
 
 parseNonTerminal :: Parser TNonTerminal 
 parseNonTerminal = do
-  x <- many(upper <*> char '\'') <|> upper 
-  --y <- option _ (char '\'')
-  return x
+      x <- many1 upper
+      y <- optionMaybe $ char '\''
+      case y of
+        Nothing -> return x 
+        Just a -> return $ x ++ [a]
 
 parseNonTerminals :: Parser [TNonTerminal]
 parseNonTerminals = sepBy1 parseNonTerminal comma
@@ -42,14 +44,11 @@ parseRules =
 
 cFG :: Parser TCFGrammar
 cFG = do
-  nonTerminals <- parseNonTerminals
-  newLine
-  terminals <- parseTerminals
-  newLine
+  TCFGrammar <$> (parseNonTerminals <* newLine)
+  <*> (parseTerminal <* newLine)
   start <- parseNonTerminal
   newLine
   rules <- parseRules
-  return $ TCFGrammar nonTerminals terminals start rules
 
 parseCFG :: String -> Either ParseError TCFGrammar
 parseCFG = parse cFG ""
