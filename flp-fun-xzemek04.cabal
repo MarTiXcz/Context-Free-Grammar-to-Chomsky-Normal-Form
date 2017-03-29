@@ -17,7 +17,10 @@ library
   hs-source-dirs:      src
   exposed-modules:     Lib
                      , Parser.OptionsParser
+                     , Parser.CFGParser
                      , Type.OptionsParser
+                     , Type.CFGParser
+                     , CFGAlgorithms
   build-depends:       base >= 4.7 && < 5
                      , parsec
                      , optparse-applicative

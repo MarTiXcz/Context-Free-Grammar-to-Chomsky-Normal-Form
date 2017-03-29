@@ -1,5 +1,7 @@
 module Type.CFGParser where
 
+import Data.Char
+
 type TSymbol = Char
 type TNonTerminal = TSymbol
 type TTerminal = TSymbol
@@ -15,3 +17,18 @@ data TCFGrammar = TCFGrammar
   , tStartTerminal :: TTerminal
   , tRules :: [TRule]
   } deriving (Show)
+
+isOneNonTerminal :: [TSymbol] -> Bool
+isOneNonTerminal [x] = isUpper x
+--isOneNonTerminal (x:xs) = False
+isOneNonTerminal _ = False
+
+isTwoNonTerminals :: [TSymbol] -> Bool
+isTwoNonTerminals [x, y] = isOneNonTerminal [x] && isOneNonTerminal [y]
+--isTwoNonTerminals (x:xs) = False
+isTwoNonTerminals _ = False
+
+isOneTerminal :: [TSymbol] -> Bool
+isOneTerminal [x] = isLower x
+isOneTerminal (x:xs) = False
+isOneTerminal _ = False

@@ -7,11 +7,6 @@ import Data.Char
 --   )
 import Type.CFGParser
 
-isOneNonTerminal :: [TSymbol] -> Bool
-isOneNonTerminal [x] = isUpper x
-isOneNonTerminal (x:xs) = False
-isOneNonTerminal _ = False
-
 getNonTerminals :: [TRule] -> [TNonTerminal] -> [TNonTerminal]
 -- Rules.Where(x => nonT.Contains(x.nonterminal) && x.expression.isSingleNonTerminal)
 getNonTerminals rules [] = []
@@ -40,11 +35,12 @@ getNonTerminals rules (x:xs) = x : getNonTerminals rules xs
 --               tNonTerminal rule == nonT')
 --            rules)
 -- getNonTerminals rules (x:xs) = x : getNonTerminals rules xs
-createNewRules :: [TNonTerminal] -> [TRule] -> [TRule]
-createNewRules _ [] = []
-createNewRules [] rules = []
-createNewRules (nonTerminal:rest) rules =
-  getRulesForNonTerminal nonTerminal rules ++ createNewRules rest rules
+createRulesWithoutSimple :: [TNonTerminal] -> [TRule] -> [TRule]
+createRulesWithoutSimple _ [] = []
+createRulesWithoutSimple [] rules = []
+createRulesWithoutSimple (nonTerminal:rest) rules =
+  getRulesForNonTerminal nonTerminal rules ++
+  createRulesWithoutSimple rest rules
 
 --TODO: nejspis vyhodnocuje getNonTerminals zbytecne vickrat
 getRulesForNonTerminal :: TNonTerminal -> [TRule] -> [TRule]
@@ -54,8 +50,10 @@ getRulesForNonTerminal nonTerminal rules =
     (filter
        (\rule ->
           not (isOneNonTerminal (tExpression rule)) &&
+          --jestli neterminal pravidla je v Na mnozine
           elem (tNonTerminal rule) (getNonTerminals rules [nonTerminal]))
        rules)
+
 --creates new grammar from old but with new Rules
 removeSimpleRules :: TCFGrammar -> TCFGrammar
 removeSimpleRules originalGrammar =
@@ -63,4 +61,15 @@ removeSimpleRules originalGrammar =
     (tNonTerminals originalGrammar)
     (tTerminals originalGrammar)
     (tStartTerminal originalGrammar)
-    (createNewRules (tNonTerminals originalGrammar) (tRules originalGrammar))
+    (createRulesWithoutSimple
+       (tNonTerminals originalGrammar)
+       (tRules originalGrammar))
+
+createCNFRules :: [TRule] -> [TRule]
+createCNFRules =
+  filter
+    (\rule ->
+       isOneTerminal (tExpression rule) || isTwoNonTerminals (tExpression rule))
+
+convertToCNF :: TCFGrammar -> TCFGrammar
+convertToCNF originalGrammar = undefined
