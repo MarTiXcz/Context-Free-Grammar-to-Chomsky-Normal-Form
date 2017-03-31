@@ -3,6 +3,9 @@
 #### zemek.m@gmail.com (xzemek04@stud.fit.vutbr.cz)                                                              
              
 Use STACK BUILD.
+    
+    stack build  flp-fun-xzemek04 
+    stack exec flp-fun-xzemek04-exe -- -i test.txt
 
 using libraries:
 

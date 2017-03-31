@@ -7,6 +7,7 @@ import Parser.OptionsParser
 import System.Environment
 import Type.CFGParser
 import Type.OptionsParser
+import System.IO (hPutStrLn, stderr)
 
 main :: IO ()
 main = do
@@ -16,7 +17,7 @@ main = do
   --parse context free grammar
   case parseCFG input of
     Left e -> do
-      putStrLn "Error parsing input:"
+      hPutStrLn stderr "Error parsing input:"
       print e
     Right r -> runMode (mode opts) r
 
