@@ -2,13 +2,13 @@ name:                flp-fun-xzemek04
 version:             0.1.0.0
 -- synopsis:
 -- description:
-homepage:            https://github.com/githubuser/flp-fun-xzemek04#readme
+homepage:            https://github.com/MarTiXcz/flp-fun-xzemek04#readme
 license:             BSD3
 license-file:        LICENSE
 author:              Martin Zemek
-maintainer:          xzemek04@stud.fit.vutbr.cz
-copyright:           2017 Martin xzemek04
-category:            Web
+maintainer:          zemek.m@gmail.com
+copyright:           2017 Martin Zemek
+category:            Grammar
 build-type:          Simple
 extra-source-files:  README.md
 cabal-version:       >=1.10
