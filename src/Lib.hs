@@ -2,7 +2,7 @@ module Lib where
 
 import Parser.OptionsParser
 import System.Exit (exitFailure)
-import System.IO (readFile)
+import System.IO (readFile, hPutStrLn, stderr)
 import System.IO.Error
        (catchIOError, ioeGetFileName, isDoesNotExistError)
 import Type.CFGParser
@@ -16,8 +16,8 @@ handler :: IOError -> IO String
 handler e
   | isDoesNotExistError e = do
     case ioeGetFileName e of
-      Just path -> putStrLn $ "Whoops! File does not exist at: " ++ path
-      Nothing -> putStrLn "Whoops! File does not exist at unknown location!"
+      Just path -> hPutStrLn stderr $ "Whoops! File does not exist at: " ++ path
+      Nothing -> hPutStrLn stderr "Whoops! File does not exist at unknown location!"
     exitFailure
   | otherwise = ioError e
 

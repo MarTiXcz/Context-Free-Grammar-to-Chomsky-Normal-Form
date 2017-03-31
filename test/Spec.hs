@@ -1,33 +1,31 @@
+import CFGAlgorithms
 import Lib
 import Parser.CFGParser
 import Parser.OptionsParser
 import System.Environment
-import Type.OptionsParser
 import Type.CFGParser
-import CFGAlgorithms
+import Type.OptionsParser
+import System.IO (hPutStrLn, stderr)
 
 main :: IO ()
 main
-    --parse arguments
  = do
-  -- opts <- withArgs ["-i", "resources/test.txt"] parseArgs
+  --parse arguments
   opts <- withArgs ["-1", "resources/study-text-example.txt"] parseArgs
-  
-    --read file
+  --opts <- withArgs ["-i", "resources/test.txt"] parseArgs
+  --read file
   input <- getInput (filepath opts)
-    --parse context free grammar
+  --parse context free grammar
   case parseCFG input of
-      Left e -> do
-        putStrLn "Error parsing input:" 
-        print e
-      Right r -> runMode (mode opts) r
-    --run selected mode
+    Left e -> do
+      hPutStrLn stderr "Error parsing input:"
+      print e
+    Right r -> runMode (mode opts) r
 
+--run selected mode
 runMode :: Mode -> TCFGrammar -> IO ()
-runMode mode grammar=  
-     case mode of
-        PrintMode -> printCFG grammar
-        -- SimpleMode -> printCFG (removeSimpleRules grammar)
-        -- SimpleMode -> printRules (createNewRules (tNonTerminals grammar) (tRules grammar))
-        SimpleMode -> printCFG (removeSimpleRules grammar)       
-        CnfMode -> print "mode CnfMode not implemented yet"
+runMode mode grammar =
+  case mode of
+    PrintMode -> printCFG grammar
+    SimpleMode -> printCFG (removeSimpleRules grammar)
+    CnfMode -> print "mode CnfMode not implemented yet"

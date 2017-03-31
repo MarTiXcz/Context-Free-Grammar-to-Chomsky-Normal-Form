@@ -22,12 +22,10 @@ data TCFGrammar = TCFGrammar
 
 isOneNonTerminal :: [TSymbol] -> Bool
 isOneNonTerminal [x] = isUpper x
---isOneNonTerminal (x:xs) = False
 isOneNonTerminal _ = False
 
 isTwoNonTerminals :: [TSymbol] -> Bool
 isTwoNonTerminals [x, y] = isOneNonTerminal [x] && isOneNonTerminal [y]
---isTwoNonTerminals (x:xs) = False
 isTwoNonTerminals _ = False
 
 isOneTerminal :: [TSymbol] -> Bool
