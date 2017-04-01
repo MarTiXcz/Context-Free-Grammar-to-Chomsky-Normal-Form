@@ -21,6 +21,7 @@ getNonTerminals rules [nonTerm] =
              rules)
   in nonTerm : getNonTerminals rules nonT
 getNonTerminals rules (x:xs) = x : getNonTerminals rules xs
+
 --equivalent to getNonTerminals, but using where isntead of let
 getNonTerminals' :: [TRule] -> [TNonTerminal] -> [TNonTerminal]
 getNonTerminals' rules [] = []
@@ -73,3 +74,31 @@ createCNFRules =
 
 convertToCNF :: TCFGrammar -> TCFGrammar
 convertToCNF originalGrammar = undefined
+
+somethingRule :: TRule -> [TRule]
+somethingRule rule
+  | isOneTerminal (tExpression rule) = [rule]
+  | isTwoNonTerminals (tExpression rule) = [rule]
+  | length (tExpression rule) > 2 =
+    createCNFRulesFromRule (tNonTerminal rule) (tExpression rule)
+
+createCNFRulesFromRule :: TNonTerminal -> [TSymbol] -> [TRule]
+createCNFRulesFromRule nonTerminal expression
+  | isOneNonTerminal [head expression] =
+    TRule
+      nonTerminal
+      (head expression : getNameForNewNonTerminal (tail expression)) :
+    --join with rules for rest of the expression
+    createCNFRulesFromRule (getNameForNewNonTerminal (tail expression)) (tail expression)
+  | isOneTerminal [head expression] = 
+    TRule
+        (getNameForNonTerminalFromTerminal (head expression))
+        (head expression : getNameForNewNonTerminal (tail expression)) :
+      --join with rules for rest of the expression
+      createCNFRulesFromRule (getNameForNewNonTerminal (tail expression)) (tail expression)
+
+getNameForNewNonTerminal :: [TSymbol] -> TNonTerminal
+getNameForNewNonTerminal expression = "<" ++ expression ++ ">"
+
+getNameForNonTerminalFromTerminal :: TTerminal -> TNonTerminal
+getNameForNonTerminalFromTerminal terminal = [terminal, '\'']
