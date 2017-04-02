@@ -5,9 +5,9 @@ import Lib
 import Parser.CFGParser
 import Parser.OptionsParser
 import System.Environment
+import System.IO (hPutStrLn, stderr)
 import Type.CFGParser
 import Type.OptionsParser
-import System.IO (hPutStrLn, stderr)
 
 main :: IO ()
 main = do
@@ -27,4 +27,4 @@ runMode mode grammar =
   case mode of
     PrintMode -> printCFG grammar
     SimpleMode -> printCFG (removeSimpleRules grammar)
-    CnfMode -> print "mode CnfMode not implemented yet"
+    CnfMode -> printCFG (convertToCNF grammar)
