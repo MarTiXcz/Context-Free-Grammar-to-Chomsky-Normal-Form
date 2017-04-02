@@ -6,7 +6,7 @@ import           Options.Applicative
 import           Type.OptionsParser
 
 version :: String
-version = "0.1"
+version = "1.0"
 
 parseArgs :: IO Opts
 parseArgs = execParser optsParser

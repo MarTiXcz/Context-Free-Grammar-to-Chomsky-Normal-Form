@@ -1,7 +1,7 @@
 module CFGAlgorithms where
 
 import Data.Char
-import Data.List (foldl')
+import Data.List (foldl') -- https://www.well-typed.com/blog/2014/04/fixing-foldl/
 
 --  ( simpleRules
 --   , cNFform
@@ -68,14 +68,16 @@ removeSimpleRules originalGrammar =
        (tNonTerminals originalGrammar))
 
 createCNFRules :: [TRule] -> [TRule]
-createCNFRules
-  -- removeDupliciteRules $
- =
+createCNFRules rules =
+  removeDupliciteRules $
+  --creates new rules for every rule not in CNF form (with duplicites)
   foldl
     (\list rule ->
        list ++ createCNFRulesFromRule (tNonTerminal rule) (tExpression rule))
     []
+    rules
 
+--  =
 --TODO: pridat nove neterminaly z novych pravidel
 convertToCNF :: TCFGrammar -> TCFGrammar
 convertToCNF originalGrammar =
@@ -87,12 +89,6 @@ convertToCNF originalGrammar =
   where
     rules = createCNFRules (tRules originalGrammar)
 
--- somethingRule :: TRule -> [TRule]
--- somethingRule rule
---   | isOneTerminal (tExpression rule) = [rule]
---   | isTwoNonTerminals (tExpression rule) = [rule]
---   | length (tExpression rule) > 2 =
---     createCNFRulesFromRule (tNonTerminal rule) (tExpression rule)
 createCNFRulesFromRule :: TNonTerminal -> [TSymbol] -> [TRule]
 createCNFRulesFromRule nonTerminal expression
   | isOneTerminal expression = [TRule nonTerminal expression]
@@ -137,18 +133,14 @@ createCNFRulesFromRule nonTerminal expression
     firstSymbol = head expression
     -- secondSymbol = 
 
-
 --not very effective, I could possibly use Data.Set for rules
 removeDupliciteRules :: [TRule] -> [TRule]
-removeDupliciteRules (x:xs) =
-  x :
-  removeDupliciteRules
-    (filter
-       (\rule ->
-          tNonTerminal rule /= tNonTerminal x &&
-          tExpression rule /= tExpression x)
-       xs)
-removeDupliciteRules [] = []
+removeDupliciteRules = foldl' (\list rule -> list ++ nonDuplicite list rule) []
+  where
+    nonDuplicite list rule =
+      if rule `elem` list
+        then []
+        else [rule]
 
 addNewNonterminalsFromRules :: [TNonTerminal] -> [TRule] -> [TNonTerminal]
 addNewNonterminalsFromRules nonTerminals =

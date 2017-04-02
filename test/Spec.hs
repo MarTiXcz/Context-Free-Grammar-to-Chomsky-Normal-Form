@@ -11,8 +11,8 @@ main :: IO ()
 main
  = do
   --parse arguments
-  opts <- withArgs ["-2", "resources/study-text-example.txt"] parseArgs
-  -- opts <- withArgs ["-2", "resources/test.txt"] parseArgs
+  -- opts <- withArgs ["-2", "resources/study-text-example.txt"] parseArgs
+  opts <- withArgs ["-2", "resources/test.txt"] parseArgs
   --opts <- withArgs ["-i", "resources/test.txt"] parseArgs
   --read file
   input <- getInput (filepath opts)

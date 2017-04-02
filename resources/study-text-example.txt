@@ -6,5 +6,6 @@ E->T
 T->TmF
 T->F
 F->lEr
-F->lr
+F->ET
+F->ET
 F->i

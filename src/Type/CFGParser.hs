@@ -11,7 +11,7 @@ type TTerminal = TSymbol
 data TRule = TRule
   { tNonTerminal :: TNonTerminal
   , tExpression :: [TSymbol]
-  } deriving (Show)
+  } deriving (Show, Eq)
 
 data TCFGrammar = TCFGrammar
   { tNonTerminals :: [TNonTerminal]

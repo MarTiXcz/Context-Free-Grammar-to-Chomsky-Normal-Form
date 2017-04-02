@@ -22,16 +22,7 @@ handler e
   | otherwise = ioError e
 
 --print output functions
--- printNonTerminals2 :: [TNonTerminal] -> IO ()
--- -- printNonTerminals [] = return ()
--- printNonTerminals2 (x:xs) = do
---   putChar x
---   if null xs
---     then putChar '\n'
---     else do
---     putChar ','
---     printNonTerminals2 xs
---TODO: ODSTRANIT REKURZI
+
 --private funkce
 printStringSepByComma :: [String] -> IO ()
 printStringSepByComma [] = return ()
