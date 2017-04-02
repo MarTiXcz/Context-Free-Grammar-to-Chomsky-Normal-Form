@@ -1,30 +1,29 @@
 module Parser.OptionsParser where
 
-import           Data.Semigroup         ((<>))
-import           Options.Applicative
+import Data.Semigroup ((<>))
+import Options.Applicative
 
-import           Type.OptionsParser
+import Type.OptionsParser
 
 version :: String
 version = "1.0"
 
 parseArgs :: IO Opts
 parseArgs = execParser optsParser
-    where
+  where
     optsParser =
-        info
-            (helper <*> versionOption <*> fullParser)
-            (fullDesc <> progDesc "BKG-2-CNF" <>
-             header
-                 "BKG-2-CNF-program for converting any CFG to CNF")
+      info
+        (helper <*> versionOption <*> fullParser)
+        (fullDesc <> progDesc "BKG-2-CNF" <>
+         header "BKG-2-CNF-program for converting any CFG to CNF")
     versionOption = infoOption version (long "version" <> help "Show version")
-
 
 printMode :: Parser Mode
 printMode = flag' PrintMode (short 'i' <> help "Print unchanged CFG")
 
 simpleMode :: Parser Mode
-simpleMode = flag' SimpleMode (short '1' <> help "Print CFG without simple rules")
+simpleMode =
+  flag' SimpleMode (short '1' <> help "Print CFG without simple rules")
 
 cnfMode :: Parser Mode
 cnfMode = flag' CnfMode (short '2' <> help "Print CFG in CNF")
@@ -33,11 +32,7 @@ modeParser :: Parser Mode
 modeParser = printMode <|> simpleMode <|> cnfMode
 
 fileInput :: Parser FilePath
-fileInput = argument str
-  ( metavar "Filename"
-  <> value ""
-  <> help "Input file" )
+fileInput = argument str (metavar "Filename" <> value "" <> help "Input file")
 
 fullParser :: Parser Opts
 fullParser = Opts <$> modeParser <*> fileInput
-

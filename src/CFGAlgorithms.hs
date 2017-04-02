@@ -1,11 +1,11 @@
-module CFGAlgorithms where
+module CFGAlgorithms
+  ( removeSimpleRules
+  , convertToCNF
+  ) where
 
 import Data.Char
 import Data.List (foldl') -- https://www.well-typed.com/blog/2014/04/fixing-foldl/
 
---  ( simpleRules
---   , cNFform
---   )
 import Type.CFGParser
 
 -- Rules.Where(rule => nonT.Contains(x.nonterminal) && rule.expression.isSingleNonTerminal())
@@ -77,8 +77,6 @@ createCNFRules rules =
     []
     rules
 
---  =
---TODO: pridat nove neterminaly z novych pravidel
 convertToCNF :: TCFGrammar -> TCFGrammar
 convertToCNF originalGrammar =
   TCFGrammar

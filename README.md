@@ -1,6 +1,8 @@
 # BKG2CNF Documentation
+## Author
 ### Martin Zemek 
-#### zemek.m@gmail.com (xzemek04@stud.fit.vutbr.cz)                                                              
+student xzemek04 at [Brno university of Technology](www.fit.vutbr.cz)  
+email: zemek.m@gmail.com (xzemek04@stud.fit.vutbr.cz)
 
 ## Build and Run             
 Use STACK BUILD.
@@ -17,7 +19,7 @@ Main is in app/Main.hs
 Test main is in test/Spec.hs. Program arguments are hardcoded there.
 
 ## Known bugs
-none - everything should work.
+None - everything should work.
 
 ## Limitations
 nonterminals = [A-Z]  
@@ -43,3 +45,11 @@ example of input:
     B->AS
     B->b
     (newline)
+
+## Notable sources
+[https://github.com/pcapriotti/optparse-applicative](https://github.com/pcapriotti/optparse-applicative)  
+[http://blog.jakubarnold.cz/2014/08/10/parsing-css-with-parsec.html](http://blog.jakubarnold.cz/2014/08/10/parsing-css-with-parsec.html)  
+[http://book.realworldhaskell.org/read/using-parsec.html](http://book.realworldhaskell.org/read/using-parsec.html)
+
+## Thanks
+#### [Ing. Marek Kidoň](https://github.com/Tr1p0d)  – for great lab exercises and very helpful consultation on project.

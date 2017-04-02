@@ -20,6 +20,8 @@ data TCFGrammar = TCFGrammar
   , tRules :: [TRule]
   } deriving (Show)
 
+--Not sure if these functions should be here. But they seem like type extension methods.
+
 isOneNonTerminal :: [TSymbol] -> Bool
 isOneNonTerminal [x] = isUpper x
 isOneNonTerminal _ = False
@@ -30,5 +32,5 @@ isTwoNonTerminals _ = False
 
 isOneTerminal :: [TSymbol] -> Bool
 isOneTerminal [x] = isLower x
-isOneTerminal (x:xs) = False
+-- isOneTerminal (x:xs) = False
 isOneTerminal _ = False
