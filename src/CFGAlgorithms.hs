@@ -23,7 +23,7 @@ getNonTerminals rules [nonTerm] =
   in nonTerm : getNonTerminals rules nonT
 getNonTerminals rules (x:xs) = x : getNonTerminals rules xs
 
---equivalent to getNonTerminals, but using where isntead of let
+--equivalent to getNonTerminals, but using where instead of let
 getNonTerminals' :: [TRule] -> [TNonTerminal] -> [TNonTerminal]
 getNonTerminals' rules [] = []
 getNonTerminals' rules [nonTerm] = nonTerm : getNonTerminals' rules nonT
