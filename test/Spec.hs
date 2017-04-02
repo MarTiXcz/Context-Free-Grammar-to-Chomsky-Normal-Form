@@ -11,7 +11,8 @@ main :: IO ()
 main
  = do
   --parse arguments
-  opts <- withArgs ["-1", "resources/study-text-example.txt"] parseArgs
+  opts <- withArgs ["-2", "resources/study-text-example.txt"] parseArgs
+  -- opts <- withArgs ["-2", "resources/test.txt"] parseArgs
   --opts <- withArgs ["-i", "resources/test.txt"] parseArgs
   --read file
   input <- getInput (filepath opts)
@@ -28,4 +29,4 @@ runMode mode grammar =
   case mode of
     PrintMode -> printCFG grammar
     SimpleMode -> printCFG (removeSimpleRules grammar)
-    CnfMode -> print "mode CnfMode not implemented yet"
+    CnfMode -> printCFG (convertToCNF grammar)

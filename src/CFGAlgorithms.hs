@@ -1,6 +1,7 @@
 module CFGAlgorithms where
 
 import Data.Char
+import Data.List (foldl')
 
 --  ( simpleRules
 --   , cNFform
@@ -67,35 +68,100 @@ removeSimpleRules originalGrammar =
        (tNonTerminals originalGrammar))
 
 createCNFRules :: [TRule] -> [TRule]
-createCNFRules =
-  filter
-    (\rule ->
-       isOneTerminal (tExpression rule) || isTwoNonTerminals (tExpression rule))
+createCNFRules
+  -- removeDupliciteRules $
+ =
+  foldl
+    (\list rule ->
+       list ++ createCNFRulesFromRule (tNonTerminal rule) (tExpression rule))
+    []
 
+--TODO: pridat nove neterminaly z novych pravidel
 convertToCNF :: TCFGrammar -> TCFGrammar
-convertToCNF originalGrammar = undefined
+convertToCNF originalGrammar =
+  TCFGrammar
+    (addNewNonterminalsFromRules (tNonTerminals originalGrammar) rules)
+    (tTerminals originalGrammar)
+    (tStartNonTerminal originalGrammar)
+    rules
+  where
+    rules = createCNFRules (tRules originalGrammar)
 
-somethingRule :: TRule -> [TRule]
-somethingRule rule
-  | isOneTerminal (tExpression rule) = [rule]
-  | isTwoNonTerminals (tExpression rule) = [rule]
-  | length (tExpression rule) > 2 =
-    createCNFRulesFromRule (tNonTerminal rule) (tExpression rule)
-
+-- somethingRule :: TRule -> [TRule]
+-- somethingRule rule
+--   | isOneTerminal (tExpression rule) = [rule]
+--   | isTwoNonTerminals (tExpression rule) = [rule]
+--   | length (tExpression rule) > 2 =
+--     createCNFRulesFromRule (tNonTerminal rule) (tExpression rule)
 createCNFRulesFromRule :: TNonTerminal -> [TSymbol] -> [TRule]
 createCNFRulesFromRule nonTerminal expression
-  | isOneNonTerminal [head expression] =
+  | isOneTerminal expression = [TRule nonTerminal expression]
+  | isTwoNonTerminals expression = [TRule nonTerminal expression]
+  --expression starts with nonterminal and is longer than 2
+  | length expression > 2 && isOneNonTerminal [firstSymbol] =
+    TRule nonTerminal (firstSymbol : getNameForNewNonTerminal restExpression) :
+    --join with rules for rest of the expression
+    createCNFRulesFromRule
+      (getNameForNewNonTerminal restExpression)
+      restExpression
+  --expression starts with terminal and is longer than 2
+  | length expression > 2 && isOneTerminal [firstSymbol] =
     TRule
       nonTerminal
-      (head expression : getNameForNewNonTerminal (tail expression)) :
+      (getNameForNonTerminalFromTerminal firstSymbol ++
+       getNameForNewNonTerminal restExpression) :
+    --rule for newNonTerminalFromTerminal -> terminal
+    (TRule (getNameForNonTerminalFromTerminal firstSymbol) [firstSymbol] :
     --join with rules for rest of the expression
-    createCNFRulesFromRule (getNameForNewNonTerminal (tail expression)) (tail expression)
-  | isOneTerminal [head expression] = 
+     createCNFRulesFromRule
+       (getNameForNewNonTerminal restExpression)
+       restExpression)
+  | isLower firstSymbol =
     TRule
-        (getNameForNonTerminalFromTerminal (head expression))
-        (head expression : getNameForNewNonTerminal (tail expression)) :
-      --join with rules for rest of the expression
-      createCNFRulesFromRule (getNameForNewNonTerminal (tail expression)) (tail expression)
+      nonTerminal
+      (getNameForNonTerminalFromTerminal firstSymbol ++ restExpression) :
+    --rule for newNonTerminalFromTerminal -> terminal
+    [TRule (getNameForNonTerminalFromTerminal firstSymbol) [firstSymbol]]
+  | length expression == 2 && isLower (head restExpression) =
+    TRule
+      nonTerminal
+      (firstSymbol : getNameForNonTerminalFromTerminal (head restExpression)) :
+    --rule for newNonTerminalFromTerminal -> terminal
+    [ TRule
+        (getNameForNonTerminalFromTerminal (head restExpression))
+        [head restExpression]
+    ]
+  | otherwise = []
+  where
+    restExpression = tail expression
+    firstSymbol = head expression
+    -- secondSymbol = 
+
+
+--not very effective, I could possibly use Data.Set for rules
+removeDupliciteRules :: [TRule] -> [TRule]
+removeDupliciteRules (x:xs) =
+  x :
+  removeDupliciteRules
+    (filter
+       (\rule ->
+          tNonTerminal rule /= tNonTerminal x &&
+          tExpression rule /= tExpression x)
+       xs)
+removeDupliciteRules [] = []
+
+addNewNonterminalsFromRules :: [TNonTerminal] -> [TRule] -> [TNonTerminal]
+addNewNonterminalsFromRules nonTerminals =
+  foldl'
+    (\list rule -> list ++ addNewNonterminal (tNonTerminal rule) nonTerminals)
+    nonTerminals
+
+--returns empty list if nonTerminal is already in nonTerminals else returns nonTerminal in list for concatenation
+addNewNonterminal :: TNonTerminal -> [TNonTerminal] -> [TNonTerminal]
+addNewNonterminal nonTerminal nonTerminals =
+  if nonTerminal `elem` nonTerminals
+    then []
+    else [nonTerminal]
 
 getNameForNewNonTerminal :: [TSymbol] -> TNonTerminal
 getNameForNewNonTerminal expression = "<" ++ expression ++ ">"
